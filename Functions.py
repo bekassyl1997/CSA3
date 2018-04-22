@@ -44,10 +44,10 @@ def alu(a=0, b=0, op=0):
     if op == np.uint8(0x13):
         return np.uint8(a ^ b)
     if op == np.uint8(0x14):
-        if a > b:
-            return np.uint8(a)
+        if a == b:
+            return 0
         else:
-            return np.uint8(b)
+            return 1
     return False
 
 # Task 3
